@@ -80,4 +80,4 @@ Contributing
 
 Contributions are welcome! Please fork the repository and submit a pull request with your changes.
 
-Host of Project: Mikaeel Gamieldien, [text](https://github.com/K0BraKhan33)
+Host of Project: Mikaeel Gamieldien, [K0BraKhan33](https://github.com/K0BraKhan33)
