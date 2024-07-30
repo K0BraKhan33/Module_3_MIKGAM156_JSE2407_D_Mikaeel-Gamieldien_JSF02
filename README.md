@@ -1,47 +1,83 @@
-# Svelte + Vite
+GoodMarting Svelte Project
 
-This template should help get you started developing with Svelte in Vite.
+GoodMarting is a Svelte-based e-commerce application showcasing a list of products with detailed views. The project features product filtering, sorting, and navigation functionalities, all built with Vite and Svelte.
 
-## Recommended IDE Setup
+Technologies Used
 
-[VS Code](https://code.visualstudio.com/) + [Svelte](https://marketplace.visualstudio.com/items?itemName=svelte.svelte-vscode).
+Vite: A modern build tool for fast development and optimized production builds.
+Svelte: A component framework for building user interfaces.
+Svelte-Spa-Router: A lightweight router for single-page applications in Svelte.
+Fake Store API: A free API used to fetch product data.
+Setup Instructions
 
-## Need an official Svelte framework?
+Prerequisites
 
-Check out [SvelteKit](https://github.com/sveltejs/kit#readme), which is also powered by Vite. Deploy anywhere with its serverless-first approach and adapt to various platforms, with out of the box support for TypeScript, SCSS, and Less, and easily-added support for mdsvex, GraphQL, PostCSS, Tailwind CSS, and more.
+Ensure you have the following installed:
 
-## Technical considerations
+Node.js (v14 or higher)
+Clone the Repository
 
-**Why use this over SvelteKit?**
+bash:
 
-- It brings its own routing solution which might not be preferable for some users.
-- It is first and foremost a framework that just happens to use Vite under the hood, not a Vite app.
+Copy code-
+git clone https://github.com/K0BraKhan33/Module_3_MIKGAM156_JSE2407_D_Mikaeel-Gamieldien_JSF02.git
 
-This template contains as little as possible to get started with Vite + Svelte, while taking into account the developer experience with regards to HMR and intellisense. It demonstrates capabilities on par with the other `create-vite` templates and is a good starting point for beginners dipping their toes into a Vite + Svelte project.
+cd Module_3_MIKGAM156_JSE2407_D_Mikaeel-Gamieldien_JSF02
 
-Should you later need the extended capabilities and extensibility provided by SvelteKit, the template has been structured similarly to SvelteKit so that it is easy to migrate.
+Install Dependencies
 
-**Why `global.d.ts` instead of `compilerOptions.types` inside `jsconfig.json` or `tsconfig.json`?**
+bash:
 
-Setting `compilerOptions.types` shuts out all other types not explicitly listed in the configuration. Using triple-slash references keeps the default TypeScript setting of accepting type information from the entire workspace, while also adding `svelte` and `vite/client` type information.
+Copy code
+npm install
+Start Development Server
 
-**Why include `.vscode/extensions.json`?**
+bash:
 
-Other templates indirectly recommend extensions via the README, but this file allows VS Code to prompt the user to install the recommended extension upon opening the project.
+Copy code
+npm run dev
+Navigate to http://localhost:5173 in your browser to see the application in action.
 
-**Why enable `checkJs` in the JS template?**
+Project Structure
 
-It is likely that most cases of changing variable types in runtime are likely to be accidental, rather than deliberate. This provides advanced typechecking out of the box. Should you like to take advantage of the dynamically-typed nature of JavaScript, it is trivial to change the configuration.
+src/App.svelte: The main entry point for the application, setting up routing.
+src/Components/ProductList.svelte: Displays a list of products with sorting and filtering options.
+src/Components/ProductDetail.svelte: Shows detailed information about a single product.
+src/main.js: Initializes and mounts the Svelte application.
+vite.config.js: Configuration for Vite.
+Features
 
-**Why is HMR not preserving my local component state?**
+Product Grid: Display products in a responsive grid layout.
+Product Details: View detailed information about each product, including title, description, image, price, category, and rating.
+Sorting: Sort products by price (ascending or descending) or title (alphabetical).
+Filtering: Filter products by category.
+Loading States: Inform users when data is being fetched.
+Persistent Filters: Maintain applied filters and sorting when navigating between views.
+Usage Examples
 
-HMR state preservation comes with a number of gotchas! It has been disabled by default in both `svelte-hmr` and `@sveltejs/vite-plugin-svelte` due to its often surprising behavior. You can read the details [here](https://github.com/sveltejs/svelte-hmr/tree/master/packages/svelte-hmr#preservation-of-local-state).
+Navigating to Product Details
 
-If you have state that's important to retain within a component, consider creating an external store which would not be replaced by HMR.
+Click on a product card to navigate to its detailed view. The URL will include the product's ID and current sorting/filtering parameters.
 
-```js
-// store.js
-// An extremely simple external store
-import { writable } from 'svelte/store'
-export default writable(0)
-```
+Sorting and Filtering
+
+Use the dropdowns at the top of the product list to sort and filter products. Changes will be reflected immediately and will persist across navigation.
+
+Returning to the Product List
+
+Use the back button in the detailed view to return to the product list while preserving your applied filters and sorting.
+
+API Endpoints
+
+Product List: https://fakestoreapi.com/products
+Product Details: https://fakestoreapi.com/products/{id}
+Categories: https://fakestoreapi.com/products/categories
+Development Notes
+
+The application does not use local storage for filters or sorting. State is managed via URL parameters.
+Tailwind CSS is included via CDN for styling.
+Contributing
+
+Contributions are welcome! Please fork the repository and submit a pull request with your changes.
+
+Host of Project: Mikaeel Gamieldien, [text](https://github.com/K0BraKhan33)
