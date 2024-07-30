@@ -1,4 +1,4 @@
-<!--ProductDetail.svelteHTML-->
+<!--ProductDetails.svelteHTML-->
 <script>
   import { onMount } from 'svelte';
 
